@@ -1,6 +1,6 @@
-# CS251 Stanford NFT
+# Class of 2022 Stanford NFT
 
-This project implements an ERC-721 NFT for Stanford's CS251 Cryptocurrencies and Blockchain Technologies class.
+This project implements an ERC-721 NFT for Stanford's Class of 2022.
 
 ### Install Dependencies
 

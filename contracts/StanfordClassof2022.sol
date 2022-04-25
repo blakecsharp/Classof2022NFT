@@ -69,23 +69,23 @@ WWWWMMWWWWWMMWWWWWMMWWWWWMMWWWWWWMWWWWWWMWWWWWWMMWWWWWMMWWWWWMMWWWWWMMWWWWWMMMWW
 */
 
 /*
- * Stanford CS 251 NFT | Autumn 2021 Collection
+ * Stanford Class of 2022 NFT based on the Stanford CS 251 NFT | Autumn 2021 Collection
  *
  * Features: Enumerable, Ownable, Non-Transferable, Mintable
  *
  * - Enumerable: totalSupply() can be queried on-chain for convenience.
  * - Owner: Only owner can generate valid mint signatures.
- * - Non-Transferable: Only CS 251 students can own a token.
+ * - Non-Transferable: Only Class of 2022 students can own a token.
  * - Mintable: Students can mint their own NFT if they have a valid signature.
  *
- * https://github.com/danielmarin0051/CS251-Stanford-NFT
  */
 
 /// @custom:security-contact cs251ta@cs.stanford.edu
-contract StanfordCS251NFT is ERC721, ERC721Enumerable, Ownable {
-  constructor() ERC721("Stanford CS 251 NFT Autumn 2021", "CS 251") {}
+contract StanfordClassof2022 is ERC721, ERC721Enumerable, Ownable {
+  constructor() ERC721("Stanford Class of 2022 Token", "Class of 2022") {}
 
   function _baseURI() internal pure override returns (string memory) {
+    // Update!
     return "ipfs://QmUW2246fZRGMv3An4EZhN78xVANQSw3ZKLXsAVa3DsAu9";
   }
 
