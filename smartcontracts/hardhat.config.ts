@@ -22,8 +22,8 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 const MUMBAI_RPC_URL = "https://rpc-mumbai.maticvigil.com";
 const MUMBAI_PRIVATE_KEY = "0xef44f641fb45153d599239a29161c158149f989959711cf89af260826883500c"; // Address: 0x08b353377aCea9a9f2c68F082fc6C80E09Ad7Aab
 const POLYGON_RPC_URL = "https://polygon-rpc.com/";
-const POLYGON_PRIVATE_KEY = undefined; // TODO: Paste your Polygon private key (the account will be the contract owner)
-const POLYGONSCAN_API_KEY = undefined; // TODO: Paste your Etherscan API Key if you want to use contract verification
+const POLYGON_PRIVATE_KEY = process.env.PRIVATE_KEY; // TODO: Paste your Polygon private key (the account will be the contract owner)
+const POLYGONSCAN_API_KEY = process.env.ETHERSCAN_API_KEY; // TODO: Paste your Etherscan API Key if you want to use contract verification
 
 const config: HardhatUserConfig = {
   solidity: "0.8.4",

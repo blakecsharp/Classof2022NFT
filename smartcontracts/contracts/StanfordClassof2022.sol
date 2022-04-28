@@ -82,7 +82,20 @@ WWWWMMWWWWWMMWWWWWMMWWWWWMMWWWWWWMWWWWWWMWWWWWWMMWWWWWMMWWWWWMMWWWWWMMWWWWWMMMWW
 
 /// @custom:security-contact cs251ta@cs.stanford.edu
 contract StanfordClassof2022 is ERC721, ERC721Enumerable, Ownable {
-  constructor() ERC721("Stanford Class of 2022 Token", "Class of 2022") {}
+  uint256 public tokenCounter;
+
+  /*
+  struct AddressData {
+    uint128 balance;
+    uint128 numberMinted;
+  }
+
+   mapping(address => AddressData) private _addressData;
+   */
+
+  constructor() ERC721("Stanford Class of 2022 Token", "Class of 2022") {
+    tokenCounter = 0;
+  }
 
   function _baseURI() internal pure override returns (string memory) {
     // Update!
@@ -96,7 +109,21 @@ contract StanfordClassof2022 is ERC721, ERC721Enumerable, Ownable {
 
   // -------- CUSTOM LOGIC ---------------------------
 
-  function mint(uint256 nonce, bytes memory signature) public {
+  function setAllowList() external onlyOwner {
+    // only the owner can call setAllowList()!
+  }
+
+  function mint() public {
+    address minter = _msgSender();
+    // this might have a bug because contracts did mint
+    require(tx.origin == minter, "contracts are not allowed to mint");
+
+    // ensure here the sender does not already own a token
+    // numberMinted = uint256(_addressData[owner].numberMinted);
+
+    // now we need a check here to ensure the address is on our approved list
+
+
     require(!_exists(nonce), "Token already minted");
     require(verifySignature(nonce, signature, owner()), "Invalid signature");
     _safeMint(msg.sender, nonce);

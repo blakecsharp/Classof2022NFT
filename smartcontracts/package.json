@@ -39,7 +39,10 @@
     "typescript": "^4.3.5"
   },
   "dependencies": {
-    "@openzeppelin/contracts": "^4.4.0",
+    "@openzeppelin/contracts": "^4.6.0",
     "@pinata/sdk": "^1.1.23"
-  }
+  },
+  "bundleDependencies": [
+    "@openzeppelin/contracts"
+  ]
 }
