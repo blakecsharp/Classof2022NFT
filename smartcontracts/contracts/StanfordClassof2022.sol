@@ -92,9 +92,7 @@ contract StanfordClassof2022 is ERC721, ERC721Enumerable, Ownable {
 
   mapping(address => AddressData) private _addresses;
 
-  constructor() ERC721("Stanford Class of 2022 Token", "Class of 2022") {
-    tokenCounter = 0;
-  }
+  constructor() ERC721("Stanford Class of 2022 Token", "Class of 2022") {}
 
   function _baseURI() internal pure override returns (string memory) {
     // Update!
@@ -111,7 +109,7 @@ contract StanfordClassof2022 is ERC721, ERC721Enumerable, Ownable {
   function addAddressesToAllowlist(address[] calldata aAddresses) external onlyOwner {
     // only the owner can call setAllowList()!
     for (uint i = 0; i < aAddresses.length; i++) {
-        AddressData toAdd;
+        AddressData memory toAdd;
         toAdd.hasMinted = false;
         _addresses[aAddresses[i]] = toAdd;
     }
