@@ -4,6 +4,7 @@ pragma solidity ^0.8.2;
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/utils/Counters.sol";
 
 /*
 MMMWNNWMMMWNNWMMMWNNWMMMWWNWMMMWWNWWMMWWNWWMMMWNNWMMMWNNWMMMWNNWMMMWNNWMMMWWWNWMMMWWNWWMMWWNWWMMMWNWWMMMWNNWMMMWNNWMMMWNNWMMMWNNWMMMWWNWWMMWWNWWMMMWNN
@@ -82,16 +83,14 @@ WWWWMMWWWWWMMWWWWWMMWWWWWMMWWWWWWMWWWWWWMWWWWWWMMWWWWWMMWWWWWMMWWWWWMMWWWWWMMMWW
 
 /// @custom:security-contact cs251ta@cs.stanford.edu
 contract StanfordClassof2022 is ERC721, ERC721Enumerable, Ownable {
-  uint256 public tokenCounter;
+  using Counters for Counters.Counter;
+  Counters.Counter private _tokenIds;
 
-  /*
   struct AddressData {
-    uint128 balance;
-    uint128 numberMinted;
+    bool hasMinted;
   }
 
-   mapping(address => AddressData) private _addressData;
-   */
+  mapping(address => AddressData) private _addresses;
 
   constructor() ERC721("Stanford Class of 2022 Token", "Class of 2022") {
     tokenCounter = 0;
@@ -109,8 +108,13 @@ contract StanfordClassof2022 is ERC721, ERC721Enumerable, Ownable {
 
   // -------- CUSTOM LOGIC ---------------------------
 
-  function setAllowList() external onlyOwner {
+  function addAddressesToAllowlist(address[] calldata aAddresses) external onlyOwner {
     // only the owner can call setAllowList()!
+    for (uint i = 0; i < aAddresses.length; i++) {
+        AddressData toAdd;
+        toAdd.hasMinted = false;
+        _addresses[aAddresses[i]] = toAdd;
+    }
   }
 
   function mint() public {
@@ -120,13 +124,16 @@ contract StanfordClassof2022 is ERC721, ERC721Enumerable, Ownable {
 
     // ensure here the sender does not already own a token
     // numberMinted = uint256(_addressData[owner].numberMinted);
+    // LEGACY: require(!_exists(nonce), "Token already minted");
+    // LEGACY: require(verifySignature(nonce, signature, owner()), "Invalid signature");
+
+    require(!_addresses[minter].hasMinted, "Address must be on the allow list and not have minted");
+    _addresses[minter].hasMinted = true;
 
     // now we need a check here to ensure the address is on our approved list
+    _safeMint(msg.sender, _tokenIds.current());
 
-
-    require(!_exists(nonce), "Token already minted");
-    require(verifySignature(nonce, signature, owner()), "Invalid signature");
-    _safeMint(msg.sender, nonce);
+    _tokenIds.increment();
   }
 
   // See https://solidity-by-example.org/signature/
