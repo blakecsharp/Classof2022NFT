@@ -1,22 +1,22 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
 
 body {
   margin: 0;
   font-family: "Rubik";
-  color: #254cdd;
+  color: #8c1515;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: "Source Sans Pro", monospace;
 }
 
 .Minter {
-  max-width: 80vh;
+  max-width: 100vh;
   max-height: 80vh;
-  padding: 60px 100px;
+  padding: 60px 60px;
   margin: 0 auto;
   text-align: left;
 }
@@ -52,6 +52,34 @@ button {
   cursor: pointer;
 }
 
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  align-items: center;
+  letter-spacing: 0.12em;
+}
+
+td {
+  font-size: 15vh;
+  text-align: center;
+}
+
+.square {
+  width: 45vh;
+  height: 45vh;
+  background-color: #b83a4b;
+}
+
+h1 {
+  font-size: 15vh /*calc(80px + 2vmin)*/;
+  margin: 0;
+  display: inline-block;
+  align-items: center;
+  text-align: justify;
+}
+
 #title {
   padding-top: 32px;
 }
@@ -65,6 +93,12 @@ button {
   border-radius: 16px;
   text-align: center;
   padding: 32px 60px;
+}
+
+#header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 #walletButton {

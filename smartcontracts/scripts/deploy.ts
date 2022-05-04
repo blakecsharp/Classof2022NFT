@@ -19,11 +19,11 @@ async function main() {
   console.log("Account balance:", (await deployer.getBalance()).toString());
   console.log("Deploying...");
 
-  const StanfordCS251NFTFactory = await ethers.getContractFactory("StanfordCS251NFT");
-  const StanfordCS251NFT = await StanfordCS251NFTFactory.deploy();
-  await StanfordCS251NFT.deployed();
+  const StanfordClassOf2022NFTFactory = await ethers.getContractFactory("StanfordClassof2022");
+  const StanfordClassOf2022NFT = await StanfordClassOf2022NFTFactory.deploy();
+  await StanfordClassOf2022NFT.deployed();
 
-  console.log("StanfordCS251NFT deployed to:", StanfordCS251NFT.address);
+  console.log("StanfordClassOf2022NFT deployed to:", StanfordClassOf2022NFT.address);
   console.log(
     "Note: Due to unknwown reasons, the address above might not in fact be the deployed contract's address. Please verify the address on polygonscan."
   );

@@ -87,6 +87,7 @@ contract StanfordClassof2022 is ERC721, ERC721Enumerable, Ownable {
   Counters.Counter private _tokenIds;
 
   struct AddressData {
+    bool onAllowList;
     bool hasMinted;
   }
 
@@ -111,8 +112,13 @@ contract StanfordClassof2022 is ERC721, ERC721Enumerable, Ownable {
     for (uint i = 0; i < aAddresses.length; i++) {
         AddressData memory toAdd;
         toAdd.hasMinted = false;
+        toAdd.onAllowList = true;
         _addresses[aAddresses[i]] = toAdd;
     }
+  }
+
+  function isAddressOnAllowList(address add) public view returns (bool) {
+    return _addresses[add].onAllowList;
   }
 
   function mint() public {
@@ -125,7 +131,8 @@ contract StanfordClassof2022 is ERC721, ERC721Enumerable, Ownable {
     // LEGACY: require(!_exists(nonce), "Token already minted");
     // LEGACY: require(verifySignature(nonce, signature, owner()), "Invalid signature");
 
-    require(!_addresses[minter].hasMinted, "Address must be on the allow list and not have minted");
+    require(_addresses[minter].onAllowList, "Address must be on the allow list");
+    require(!_addresses[minter].hasMinted, "Address must not have minted");
     _addresses[minter].hasMinted = true;
 
     // now we need a check here to ensure the address is on our approved list
