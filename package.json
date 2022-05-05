@@ -1,0 +1,15 @@
+{
+  "name": "ClassOf2022NFT",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "install-dependencies": "cd frontend-mint && npm install && cd ../smartcontracts && npm install",
+    "start": "cd frontend-mint && npm start",
+    "build": "cd frontend-mint && npm build",
+    "test": "cd frontend-mint && npm test",
+    "eject": "cd frontend-mint && npm eject",
+    "test-contract": "cd smartcontracts && npx hardhat test",
+    "deploy-test-polygon": "cd smartcontracts && yarn hardhat run scripts/deploy.ts --network mumbai",
+    "deploy-polygon": "cd smartcontracts && yarn hardhat run scripts/deploy.ts --network polygon"
+  }
+}
