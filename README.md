@@ -1,3 +1,3 @@
-frontend-mint has our React frontend minting site
+React frontend minting site: frontend-mint 
 
-smartcontracts has our contracts
+Smart Contracts (for now on Polygon): smartcontracts
