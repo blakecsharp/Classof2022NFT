@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import stanfordLogo from "./images/SUSig_Stack_red.png";
 require("dotenv").config();
 const alchemyKey = process.env.REACT_APP_ALCHEMY_KEY;
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
@@ -619,7 +620,7 @@ const Minter = (props) => {
   return (
     <div className="Minter">
       <div id="header">
-        <img src="images/SUSig_Stack_red.png" alt="Stanford Logo" />
+        <img src={stanfordLogo} height={60} alt="Stanford Logo" />
         <button id="walletButton" onClick={connectWalletPressed}>
           {walletAddress.length > 0 ? (
             "Connected: " +
