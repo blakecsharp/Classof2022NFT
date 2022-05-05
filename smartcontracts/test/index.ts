@@ -60,7 +60,6 @@ describe("Class of 2022 Stanford NFT", function () {
       StanfordClassof2022NFT.connect(account1).transferFrom(account1.address, account2.address, supply.toNumber() - 1)
     ).to.be.revertedWith("Token is not transferable");
   });
-
   /*
   These tests are for the legacy system where the user mints their own NFT
 
