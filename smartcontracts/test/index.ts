@@ -38,13 +38,6 @@ describe("Class of 2022 Stanford NFT", function () {
     expect(await StanfordClassof2022NFT.totalSupply()).to.equal(1);
 
     await expect(StanfordClassof2022NFT.connect(account1).mint()).to.be.revertedWith("Address must not have minted");
-    /*
-    console.log(
-      await StanfordClassof2022NFT.connect(account1).isAddressOnAllowList("0xcd432fefa0bc1b67044ed986bdfdbb9d77afb05e")
-    );*/
-    // console.log(await StanfordClassof2022NFT.totalSupply());
-    // expect(await StanfordClassof2022NFT.totalSupply()).to.equal(0);
-    // expect(await StanfordClassof2022NFT.ownerOf(nonce)).to.equal(account1.address);
   });
   it("Should revert on invalid signature", async function () {
     const nonce = 42;
@@ -66,16 +59,13 @@ describe("Class of 2022 Stanford NFT", function () {
     */
   });
   it("Should not be transferable", async function () {
-    /*
-    const nonce = 42;
-
-    const signature = await signNonce(nonce, minter);
-    const tx = await StanfordCS251NFT.connect(account1).mint(nonce, signature);
+    await StanfordClassof2022NFT.connect(minter).addAddressesToAllowlist([account1.address, account2.address]);
+    const tx = await StanfordClassof2022NFT.connect(account1).mint();
     await tx.wait();
+    let supply = await StanfordClassof2022NFT.totalSupply();
     await expect(
-      StanfordCS251NFT.connect(account1).transferFrom(account1.address, account2.address, nonce)
+      StanfordClassof2022NFT.connect(account1).transferFrom(account1.address, account2.address, supply.toNumber() - 1)
     ).to.be.revertedWith("Token is not transferable");
-    */
   });
   it("Should have the correct tokenURI for all tokens", async function () {
     /*
