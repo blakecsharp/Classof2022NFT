@@ -132,7 +132,7 @@ contract StanfordClassof2022 is ERC721, ERC721Enumerable, Ownable {
     // LEGACY: require(verifySignature(nonce, signature, owner()), "Invalid signature");
 
     require(_addresses[minter].onAllowList, "Address must be on the allow list");
-    require(!_addresses[minter].hasMinted, "Address must not have minted");
+    require(!_addresses[minter].hasMinted, "Address can only mint one token");
     _addresses[minter].hasMinted = true;
 
     // now we need a check here to ensure the address is on our approved list
