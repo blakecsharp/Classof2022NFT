@@ -121,6 +121,19 @@ contract StanfordClassof2022 is ERC721, ERC721Enumerable, Ownable {
     return _addresses[add].onAllowList;
   }
 
+  function mint(address[] calldata aAddresses) external onlyOwner {
+    for (uint i = 0; i < aAddresses.length; i++) {
+      require(_addresses[aAddresses[i]].onAllowList, "Address must be on the allow list");
+      require(!_addresses[aAddresses[i]].hasMinted, "Address can only mint one token");
+      _addresses[aAddresses[i]].hasMinted = true;
+      _safeMint(aAddresses[i], _tokenIds.current());
+      _tokenIds.increment();
+    }
+  }
+
+  /*
+  This mint function is for the system when the users mint their own NFTs
+
   function mint() public {
     address minter = _msgSender();
     // this might have a bug because contracts did mint
@@ -135,11 +148,12 @@ contract StanfordClassof2022 is ERC721, ERC721Enumerable, Ownable {
     require(!_addresses[minter].hasMinted, "Address can only mint one token");
     _addresses[minter].hasMinted = true;
 
-    // now we need a check here to ensure the address is on our approved list
+    
     _safeMint(msg.sender, _tokenIds.current());
 
     _tokenIds.increment();
   }
+  */
 
   // See https://solidity-by-example.org/signature/
   function verifySignature(

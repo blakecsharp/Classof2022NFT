@@ -22,6 +22,48 @@ describe("Class of 2022 Stanford NFT", function () {
   it("Should return the correct name", async function () {
     expect(await StanfordClassof2022NFT.name()).to.equal("Stanford Class of 2022 Token");
   });
+  it("Should allow mint", async function () {
+    let account1Address = account1.address;
+    await expect(StanfordClassof2022NFT.connect(minter).mint([account1Address])).to.be.revertedWith(
+      "Address must be on the allow list"
+    );
+    //console.log(account1);
+    await StanfordClassof2022NFT.connect(minter).addAddressesToAllowlist([account1.address]);
+    expect(await StanfordClassof2022NFT.connect(account1).isAddressOnAllowList(account1.address)).to.be.true;
+
+    let tx = await StanfordClassof2022NFT.connect(minter).mint([account1Address]);
+    tx.wait();
+    expect(await StanfordClassof2022NFT.totalSupply()).to.equal(1);
+  });
+  it("It can only mint from contract owner", async function () {
+    await expect(StanfordClassof2022NFT.connect(account1).mint([account1.address])).to.be.revertedWith(
+      "Ownable: caller is not the owner"
+    );
+  });
+  it("Should revert on double mint", async function () {
+    await StanfordClassof2022NFT.connect(minter).addAddressesToAllowlist([account1.address]);
+    expect(await StanfordClassof2022NFT.connect(account1).isAddressOnAllowList(account1.address)).to.be.true;
+
+    let tx = await StanfordClassof2022NFT.connect(minter).mint([account1.address]);
+    tx.wait();
+    expect(await StanfordClassof2022NFT.totalSupply()).to.equal(1);
+    await expect(StanfordClassof2022NFT.connect(minter).mint([account1.address])).to.be.revertedWith(
+      "Address can only mint one token"
+    );
+  });
+  it("Should not be transferable", async function () {
+    await StanfordClassof2022NFT.connect(minter).addAddressesToAllowlist([account1.address, account2.address]);
+    let tx = await StanfordClassof2022NFT.connect(minter).mint([account1.address]);
+    await tx.wait();
+    let supply = await StanfordClassof2022NFT.totalSupply();
+    await expect(
+      StanfordClassof2022NFT.connect(account1).transferFrom(account1.address, account2.address, supply.toNumber() - 1)
+    ).to.be.revertedWith("Token is not transferable");
+  });
+
+  /*
+  These tests are for the legacy system where the user mints their own NFT
+
   it("Should allow mint with valid signature", async function () {
     await expect(StanfordClassof2022NFT.connect(account1).mint()).to.be.revertedWith(
       "Address must be on the allow list"
@@ -52,4 +94,5 @@ describe("Class of 2022 Stanford NFT", function () {
       StanfordClassof2022NFT.connect(account1).transferFrom(account1.address, account2.address, supply.toNumber() - 1)
     ).to.be.revertedWith("Token is not transferable");
   });
+  */
 });
