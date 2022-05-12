@@ -1,19 +1,71 @@
 import { useEffect, useState } from "react";
 import stanfordLogo from "./images/SUSig_Stack_red.png";
 require("dotenv").config();
-/*
+
 const alchemyKey = process.env.REACT_APP_ALCHEMY_KEY;
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3(alchemyKey);
 
-const contractABI = []
+const contractABI = [
+  {
+    anonymous: false,
+    inputs: [
+      {
+        indexed: true,
+        internalType: "address",
+        name: "previousOwner",
+        type: "address",
+      },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "newOwner",
+        type: "address",
+      },
+    ],
+    name: "OwnershipTransferred",
+    type: "event",
+  },
+  {
+    inputs: [],
+    name: "owner",
+    outputs: [
+      {
+        internalType: "address",
+        name: "",
+        type: "address",
+      },
+    ],
+    stateMutability: "view",
+    type: "function",
+  },
+  {
+    inputs: [],
+    name: "renounceOwnership",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+  {
+    inputs: [
+      {
+        internalType: "address",
+        name: "newOwner",
+        type: "address",
+      },
+    ],
+    name: "transferOwnership",
+    outputs: [],
+    stateMutability: "nonpayable",
+    type: "function",
+  },
+];
 const contractAddress = "0xD3A109bce5332A33652708D361188523f7e04297";
 
 export const classContract = new web3.eth.Contract(
   contractABI,
   contractAddress
 );
-*/
 
 const Minter = (props) => {
   //State variables
@@ -44,6 +96,8 @@ const Minter = (props) => {
     ]);
     */
   };
+
+  console.log(classContract);
 
   return (
     <div className="Minter">

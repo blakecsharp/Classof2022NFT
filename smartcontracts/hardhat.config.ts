@@ -36,6 +36,10 @@ const config: HardhatUserConfig = {
       url: POLYGON_RPC_URL,
       accounts: POLYGON_PRIVATE_KEY ? [POLYGON_PRIVATE_KEY] : [],
     },
+    rinkeby: {
+      url: process.env.DEPLOY_KEY_RINKEBY,
+      accounts: process.env.PRIVATE_KEY ? [process.env.PRIVATE_KEY] : [],
+    },
   },
   gasReporter: {
     enabled: process.env.REPORT_GAS !== undefined,
