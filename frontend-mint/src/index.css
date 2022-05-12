@@ -1,48 +1,63 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@100;500&family=Saira:wght@400;700&display=swap");
 
-body {
-  margin: 0;
-  font-family: "Rubik";
-  color: #8c1515;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+ol {
+  list-style: none;
+  counter-reset: counter;
+  margin-left: 0;
+  padding-inline-start: 0;
 }
 
-code {
-  font-family: "Source Sans Pro", monospace;
-}
-
-.Minter {
-  max-width: 100vh;
-  max-height: 80vh;
-  padding: 60px 60px;
-  margin: 0 auto;
-  text-align: left;
-}
-
-input {
-  border-top-style: hidden;
-  border-right-style: hidden;
-  border-left-style: hidden;
-  border-bottom-style: groove;
-  font-size: 16px;
+ol li {
+  counter-increment: counter;
+  font-family: "Saira";
+  font-weight: 700;
+  font-size: 20px;
+  color: black;
+  margin-bottom: 20px;
   width: 100%;
-  border-color: rgba(4, 4, 5, 0.1);
-  line-height: 32px;
 }
 
-input:focus {
-  outline: none;
-  border-color: rgba(4, 4, 5, 0.4);
+ol li::before {
+  content: counter(counter);
+  margin-bottom: 10px;
+  width: 50px;
+  height: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  background-color: #80221c;
+  border-radius: 15px;
+  color: #fff;
+  margin-right: 30px;
+}
+
+a:link {
+  color: #0029ff;
+}
+
+a:visited {
+  color: #0029ff;
+}
+
+#formButton {
+  text-align: center;
+  margin-bottom: 50px;
+  line-height: 16px;
+  margin: 20px;
+}
+
+.listContent {
+  margin-left: 80px;
+  font-weight: 400;
 }
 
 button {
   padding: 9px 16px;
   max-height: 40px;
-  border-color: #254cdd;
-  color: #254cdd;
-  background-color: white;
+  background-color: #80221c;
+  color: white;
+  border: 0;
   border-radius: 8px;
   align-items: center;
   font-size: 16px;
@@ -52,64 +67,154 @@ button {
   cursor: pointer;
 }
 
-.content {
+.contactUs {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-
+  flex-direction: column;
   align-items: center;
-  letter-spacing: 0.12em;
+  padding-bottom: 50px;
 }
 
-td {
-  font-size: 15vh;
-  text-align: center;
+@media only screen and (max-width: 1000px) {
+  .Minter {
+    max-width: 100vh;
+    max-height: 80vh;
+    padding: 60px 60px;
+    text-align: left;
+  }
+
+  .content {
+    color: #8c1515;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    letter-spacing: 0.12em;
+  }
+
+  .square {
+    width: 45vh;
+    height: 45vh;
+    background-color: #b83a4b;
+  }
+
+  table {
+    margin: 0px auto;
+  }
+
+  td {
+    font-size: 15vh;
+    text-align: center;
+    font-family: "Bebas Neue";
+    letter-spacing: 0.3em;
+  }
+
+  .FAQ {
+    font-family: "Saira";
+    color: black;
+  }
 }
 
-.square {
-  width: 45vh;
-  height: 45vh;
-  background-color: #b83a4b;
-}
+@media only screen and (min-width: 1000px) {
+  body {
+    margin: 0;
+    color: #8c1515;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
 
-h1 {
-  font-size: 15vh /*calc(80px + 2vmin)*/;
-  margin: 0;
-  display: inline-block;
-  align-items: center;
-  text-align: justify;
-}
+  code {
+    font-family: "Source Sans Pro", monospace;
+  }
 
-#title {
-  padding-top: 32px;
-}
+  .Minter {
+    max-width: 100vh;
+    max-height: 80vh;
+    padding: 60px 60px;
+    margin: 0 auto;
+    text-align: left;
+  }
 
-#status {
-  color: red;
-}
+  .instructions {
+    margin-bottom: 50px;
+  }
 
-.uploadFile {
-  border: 4px dashed rgba(4, 4, 5, 0.1);
-  border-radius: 16px;
-  text-align: center;
-  padding: 32px 60px;
-}
+  .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 
-#header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
+    align-items: center;
+    letter-spacing: 0.12em;
+  }
 
-#walletButton {
-  text-align: right;
-  float: right;
-  margin-bottom: 50px;
-  line-height: 16px;
-}
+  .leftTitle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-#mintButton {
-  margin-top: 40px;
-  background-color: #254cdd;
-  color: white;
+  td {
+    font-size: 15vh;
+    text-align: center;
+    font-family: "Bebas Neue";
+    display: inline-block;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.3em;
+  }
+
+  .FAQheader {
+    width: 45%;
+    margin-bottom: 60px;
+  }
+
+  .square {
+    width: 45vh;
+    height: 45vh;
+    background-color: #b83a4b;
+  }
+
+  h1 {
+    font-size: 15vh /*calc(80px + 2vmin)*/;
+    margin: 0;
+  }
+
+  h2 {
+    color: black;
+    font-size: 30px;
+    font-family: "Saira";
+  }
+
+  h3 {
+    font-size: 24px;
+    font-family: "Saira";
+    margin-bottom: 10px;
+  }
+
+  p {
+    font-size: 18px;
+    font-family: "Saira";
+    color: black;
+  }
+
+  #title {
+    padding-top: 32px;
+  }
+
+  #status {
+    color: red;
+  }
+
+  .uploadFile {
+    border: 4px dashed rgba(4, 4, 5, 0.1);
+    border-radius: 16px;
+    text-align: center;
+    padding: 32px 60px;
+  }
+
+  #header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
