@@ -74,6 +74,35 @@ button {
   padding-bottom: 50px;
 }
 
+.FAQ {
+  padding-bottom: 50px;
+}
+
+.FAQHeader {
+  color: black;
+  font-size: 40px;
+  font-family: "Saira";
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.FAQContent {
+  color: black;
+  font-family: "Saira";
+}
+
+.FAQQuestion {
+  font-size: 25px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.FAQAnswer {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
 @media only screen and (max-width: 1000px) {
   .Minter {
     max-width: 100vh;
@@ -107,7 +136,7 @@ button {
     letter-spacing: 0.3em;
   }
 
-  .FAQ {
+  .Instructions {
     font-family: "Saira";
     color: black;
   }
@@ -163,7 +192,7 @@ button {
     letter-spacing: 0.3em;
   }
 
-  .FAQheader {
+  .Instructionsheader {
     width: 45%;
     margin-bottom: 60px;
   }

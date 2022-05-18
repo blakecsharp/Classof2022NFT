@@ -133,8 +133,8 @@ const Minter = (props) => {
           <div className="square"></div>
         </div>
       </div>
-      <div className="FAQ">
-        <div className="FAQheader">
+      <div className="Instructions">
+        <div className="Instructionsheader">
           <h2>Claim your Stanford Graduation NFT with just a few clicks.</h2>
         </div>
         <div className="instructions">
@@ -187,6 +187,59 @@ const Minter = (props) => {
               this article.{" "}
             </a>
           </p>
+        </div>
+      </div>
+      <div className="FAQ">
+        <div className="FAQHeader">FAQ</div>
+        <div className="FAQContent">
+          <div className="FAQQuestion">What is this project?</div>
+          <div className="FAQAnswer">
+            This project is the beginning of (hopefully) a tradition at Stanford
+            to provide a graduation NFT to each Stanford graduate. We are 4
+            current Stanford undergrads developing the NFTs and creating the NFT
+            art, and we are excited to share this with you!
+          </div>
+          <div className="FAQQuestion">What are NFTs?</div>
+          <div className="FAQAnswer">
+            NFTs ("Non-Fungible Tokens") are one-of-a-kind tokens that represent
+            a unique good or asset, like digital art. They can be owned, traded,
+            and sold.
+          </div>
+          <div className="FAQQuestion">How do I claim my NFT?</div>
+          <div className="FAQAnswer">
+            Follow the setup instructions above - create a wallet and share your
+            wallet address in the form we provide.
+          </div>
+          <div className="FAQQuestion">What does the art look like?</div>
+          <div className="FAQAnswer">
+            This will be a surprise! Our amazing artist has created beautiful
+            artwork for your graduating class’ unique NFT, and it will be
+            revealed once you receive it from us. Set up your wallet and stay
+            tuned!
+          </div>
+          <div className="FAQQuestion">Does this cost money?</div>
+          <div className="FAQAnswer">
+            No! This is free. We will give you your NFT through a method called
+            “airdropping”. Once you set up your wallet using the setup
+            instructions above, we will airdrop you your NFT.
+          </div>
+          <div className="FAQQuestion">
+            NFTs are environmentally taxing. What are you doing about that?
+          </div>
+          <div className="FAQAnswer">
+            We are using Polygon, which is a more environmentally friendly
+            blockchain. Plus we are buying carbon offsets for all the carbon we
+            do produce.
+          </div>
+          <div className="FAQQuestion">Why would I want this?</div>
+          <div className="FAQAnswer">
+            This will be an NFT unique to your graduating class, which you can
+            own and show others in the future. Also, if you have any interest in
+            the crypto space, this is a great opportunity to dip your toes by
+            owning your first NFT. Lastly, in the future, we hope to create real
+            utility behind owning a graduation NFT, such as group messages,
+            events, and other opportunities exclusive to owners of the NFT.
+          </div>
         </div>
       </div>
     </div>
