@@ -129,11 +129,10 @@ button {
     margin: 0px auto;
   }
 
-  td {
+  h1 {
     font-size: 15vh;
     text-align: center;
     font-family: "Bebas Neue";
-    letter-spacing: 0.3em;
   }
 
   .Instructions {
@@ -169,20 +168,21 @@ button {
   .content {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 
     align-items: center;
     letter-spacing: 0.12em;
   }
 
-  .leftTitle {
+  .title {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 100px;
   }
 
-  td {
+  h1 {
     font-size: 15vh;
     text-align: center;
     font-family: "Bebas Neue";
@@ -193,8 +193,8 @@ button {
   }
 
   .Instructionsheader {
-    width: 45%;
     margin-bottom: 60px;
+    text-align: center;
   }
 
   .square {
@@ -204,7 +204,7 @@ button {
   }
 
   h1 {
-    font-size: 15vh /*calc(80px + 2vmin)*/;
+    font-size: 10vh;
     margin: 0;
   }
 

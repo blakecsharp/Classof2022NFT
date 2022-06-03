@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import stanfordLogo from "./images/SUSig_Stack_red.png";
+import alumniLogo from "./images/StanfordAlumniLogo.png";
 require("dotenv").config();
 
 const alchemyKey = process.env.REACT_APP_ALCHEMY_KEY;
@@ -68,37 +69,6 @@ export const classContract = new web3.eth.Contract(
 );
 
 const Minter = (props) => {
-  //State variables
-  const [walletAddress, setWallet] = useState("");
-  const [status, setStatus] = useState("");
-  const [name, setName] = useState("");
-  const [description, setDescription] = useState("");
-  const [url, setURL] = useState("");
-
-  /*
-  useEffect(async () => {
-    //TODO: implement
-  }, []);
-  */
-
-  const connectWalletPressed = async () => {
-    const accounts = await window.ethereum.request({
-      method: "eth_requestAccounts",
-    });
-    setWallet(accounts);
-  };
-
-  const onMintPressed = async () => {
-    //TODO: implement
-    /*
-    classContract.methods.addAddressesToAllowlist([
-      "0xCD432FeFA0bC1B67044eD986BdFdbB9d77AfB05E",
-    ]);
-    */
-  };
-
-  console.log(classContract);
-
   return (
     <div className="Minter">
       <div id="header">
@@ -107,30 +77,9 @@ const Minter = (props) => {
 
       <br></br>
       <div className="content">
-        <div className="leftTitle">
-          <table className="titleTable">
-            <tr>
-              <td>2</td>
-              <td>0</td>
-              <td>2</td>
-              <td>2</td>
-            </tr>
-            <tr>
-              <td>G</td>
-              <td>R</td>
-              <td>A</td>
-              <td>D</td>
-            </tr>
-            <tr>
-              <td>N</td>
-              <td>F</td>
-              <td>T</td>
-              <td>S</td>
-            </tr>
-          </table>
-        </div>
-        <div className="right">
-          <div className="square"></div>
+        <div className="title">
+          <h1>2022 GRAD NFTS</h1>
+          <img src={alumniLogo} height={250} alt="Stanford Alumni Logo" />
         </div>
       </div>
       <div className="Instructions">
@@ -227,9 +176,8 @@ const Minter = (props) => {
             NFTs are environmentally taxing. What are you doing about that?
           </div>
           <div className="FAQAnswer">
-            We are using Polygon, which is a more environmentally friendly
-            blockchain. Plus we are buying carbon offsets for all the carbon we
-            do produce.
+            We are buying carbon offsets for all the carbon we are producint
+            through this project.
           </div>
           <div className="FAQQuestion">Why would I want this?</div>
           <div className="FAQAnswer">
