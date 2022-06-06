@@ -47,14 +47,8 @@ a:visited {
   margin: 20px;
 }
 
-.listContent {
-  margin-left: 80px;
-  font-weight: 400;
-}
-
 button {
   padding: 9px 16px;
-  max-height: 40px;
   background-color: #80221c;
   color: white;
   border: 0;
@@ -75,7 +69,7 @@ button {
 }
 
 .FAQ {
-  padding-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 .FAQHeader {
@@ -103,6 +97,20 @@ button {
   margin-bottom: 20px;
 }
 
+.disclaimer {
+  padding-bottom: 50px;
+  color: black;
+  font-family: "Saira";
+  font-weight: 400;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 @media only screen and (max-width: 1000px) {
   .Minter {
     max-width: 100vh;
@@ -119,6 +127,11 @@ button {
     letter-spacing: 0.12em;
   }
 
+  .listContent {
+    margin-top: 20px;
+    font-weight: 400;
+  }
+
   .square {
     width: 45vh;
     height: 45vh;
@@ -133,6 +146,8 @@ button {
     font-size: 15vh;
     text-align: center;
     font-family: "Bebas Neue";
+    margin-top: 0;
+    margin-bottom: 0;
   }
 
   .Instructions {
@@ -151,6 +166,11 @@ button {
 
   code {
     font-family: "Source Sans Pro", monospace;
+  }
+
+  .listContent {
+    margin-left: 80px;
+    font-weight: 400;
   }
 
   .Minter {
@@ -175,10 +195,6 @@ button {
   }
 
   .title {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     margin-bottom: 100px;
   }
 
@@ -224,10 +240,6 @@ button {
     font-size: 18px;
     font-family: "Saira";
     color: black;
-  }
-
-  #title {
-    padding-top: 32px;
   }
 
   #status {

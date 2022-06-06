@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "install-dependencies": "cd frontend-mint && npm install && cd ../smartcontracts && npm install",
-    "start": "cd frontend-mint && npm start",
-    "build": "cd frontend-mint && npm build",
+    "start": "cd frontend-mint && npm run start",
+    "build": "cd frontend-mint && npm run build",
     "test": "cd frontend-mint && npm test",
     "eject": "cd frontend-mint && npm eject",
     "test-contract": "cd smartcontracts && npx hardhat test",

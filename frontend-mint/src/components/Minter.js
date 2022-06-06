@@ -95,7 +95,9 @@ const Minter = (props) => {
                 <a href="https://metamask.io/download/">metamask.io/download</a>{" "}
                 and download Metamask for Chrome, iOS, or Android. Follow the
                 setup instructions and make sure to keep your secret phrase
-                somewhere safe.
+                somewhere safe. For further help, follow these video tutorials
+                for <a href="https://youtu.be/rsijsTvJ5SQ">Chrome</a> or for{" "}
+                <a href="https://youtu.be/4KL5pZPt67g">iOS</a>.
               </div>
             </li>
             <li>
@@ -143,10 +145,12 @@ const Minter = (props) => {
         <div className="FAQContent">
           <div className="FAQQuestion">What is this project?</div>
           <div className="FAQAnswer">
-            This project is the beginning of (hopefully) a tradition at Stanford
-            to provide a graduation NFT to each Stanford graduate. We are 4
-            current Stanford undergrads developing the NFTs and creating the NFT
-            art, and we are excited to share this with you!
+            This is a Stanford-sponsored project, and it is the beginning of
+            (hopefully) a tradition at Stanford to provide a graduation NFT to
+            each Stanford graduate. This is a pilot, meaning that the NFT will
+            be a souvenir and is for personal use only. Later, utility may be
+            added to the NFT such as serving as an official verification of
+            graduation for admission to virtual alumni events and other perks.
           </div>
           <div className="FAQQuestion">What are NFTs?</div>
           <div className="FAQAnswer">
@@ -158,6 +162,13 @@ const Minter = (props) => {
           <div className="FAQAnswer">
             Follow the setup instructions above - create a wallet and share your
             wallet address in the form we provide.
+          </div>
+          <div className="FAQQuestion">Who can claim an NFT?</div>
+          <div className="FAQAnswer">
+            We are approving students in the Social Class Year of 2022, meaning
+            you began your Stanford career in 2018. Social Class Year of 2021
+            students that requested to join the 2022 Dinner on the Quad will
+            also be approved.
           </div>
           <div className="FAQQuestion">What does the art look like?</div>
           <div className="FAQAnswer">
@@ -172,23 +183,37 @@ const Minter = (props) => {
             “airdropping”. Once you set up your wallet using the setup
             instructions above, we will airdrop you your NFT.
           </div>
+          <div className="FAQQuestion">Why would I want this NFT?</div>
+          <div className="FAQAnswer">
+            This will be an NFT unique to your graduating class, which you can
+            own and show others. Also, if you have any interest in the crypto
+            space, this is a great opportunity to dip your toes by owning your
+            first NFT. Lastly, in the future, we hope to create real utility
+            behind owning a graduation NFT, such as group messages, events, and
+            other opportunities exclusive to owners of the NFT. Note that this
+            year is simply a pilot, so no utility or transferrability is
+            possible for the NFT.
+          </div>
           <div className="FAQQuestion">
             NFTs are environmentally taxing. What are you doing about that?
           </div>
           <div className="FAQAnswer">
-            We are buying carbon offsets for all the carbon we are producint
-            through this project.
+            We are buying carbon offsets for all the carbon produced through
+            this project.
           </div>
-          <div className="FAQQuestion">Why would I want this?</div>
+          <div className="FAQQuestion">Who runs this project?</div>
           <div className="FAQAnswer">
-            This will be an NFT unique to your graduating class, which you can
-            own and show others in the future. Also, if you have any interest in
-            the crypto space, this is a great opportunity to dip your toes by
-            owning your first NFT. Lastly, in the future, we hope to create real
-            utility behind owning a graduation NFT, such as group messages,
-            events, and other opportunities exclusive to owners of the NFT.
+            We are 4 current Stanford undergrads who have teamed up with
+            Stanford to develop the NFTs and creating the art, and we are
+            excited to share this with you! This project is sponsored by the
+            Stanford Alumni Association and multiple other Stanford entities are
+            involved such as the Stanford Office of Student Engagement and the
+            Registrar.
           </div>
         </div>
+      </div>
+      <div className="disclaimer">
+        This NFT is non-transferrable and For Personal Use Only.
       </div>
     </div>
   );
