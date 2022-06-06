@@ -84,7 +84,7 @@ const Minter = (props) => {
       </div>
       <div className="Instructions">
         <div className="Instructionsheader">
-          <h2>Claim your Stanford Graduation NFT with just a few clicks.</h2>
+          <h2>Claim your Stanford Class of 2022 NFT with just a few clicks.</h2>
         </div>
         <div className="instructions">
           <ol>
@@ -120,7 +120,7 @@ const Minter = (props) => {
               </div>
             </li>
             <li>
-              Receive your personalized Stanford Graduation NFT
+              Receive your personalized Stanford Class of 2022 NFT
               <div className="listContent">
                 Now, we’ll do all the work and drop your NFT directly into your
                 wallet! We’ll email you once it’s done, and you can open your
@@ -135,8 +135,9 @@ const Minter = (props) => {
             For detailed step-by-step instructions, follow Steps 1 and 2 from
             <a href="https://metamask.zendesk.com/hc/en-us/articles/360015289512-How-to-copy-your-MetaMask-account-public-address-#:~:text=To%20access%20additional%20information%20about%20your%20account%2C%20see%20instructions%20here.&text=When%20you%20hover%20over%20the,account's%20address%20to%20the%20clipboard.">
               {" "}
-              this article.{" "}
+              this article
             </a>
+            . Additionally, send us an email at stanfordnftproject@gmail.com.
           </p>
         </div>
       </div>
@@ -145,12 +146,19 @@ const Minter = (props) => {
         <div className="FAQContent">
           <div className="FAQQuestion">What is this project?</div>
           <div className="FAQAnswer">
-            This is a Stanford-sponsored project, and it is the beginning of
-            (hopefully) a tradition at Stanford to provide a graduation NFT to
-            each Stanford graduate. This is a pilot, meaning that the NFT will
-            be a souvenir and is for personal use only. Later, utility may be
-            added to the NFT such as serving as an official verification of
-            graduation for admission to virtual alumni events and other perks.
+            This is a Stanford supported, student-led pilot project. The NFT
+            will be a souvenir and is for personal, non-commercial use only.
+            Later, utility may be added to the NFT for admission to alumni
+            events and other perks. We're hoping this is the beginning of a new
+            digital tradition we can build on over time at Stanford.
+          </div>
+          <div className="FAQQuestion">Who runs this project?</div>
+          <div className="FAQAnswer">
+            We are four current Stanford undergrads who have teamed up with the
+            Class of 2022 to develop the NFTs and creating the art, and we are
+            excited to share this with you! This project is sponsored by the
+            Stanford Alumni Association and multiple other Stanford entities are
+            involved such as the Stanford Office of Student Engagement.
           </div>
           <div className="FAQQuestion">What are NFTs?</div>
           <div className="FAQAnswer">
@@ -158,17 +166,19 @@ const Minter = (props) => {
             a unique good or asset, like digital art. They can be owned, traded,
             and sold.
           </div>
-          <div className="FAQQuestion">How do I claim my NFT?</div>
+          <div className="FAQQuestion">
+            How do I claim my Stanford Class of 2022 NFT?
+          </div>
           <div className="FAQAnswer">
             Follow the setup instructions above - create a wallet and share your
             wallet address in the form we provide.
           </div>
           <div className="FAQQuestion">Who can claim an NFT?</div>
           <div className="FAQAnswer">
-            We are approving students in the Social Class Year of 2022, meaning
-            you began your Stanford career in 2018. Social Class Year of 2021
-            students that requested to join the 2022 Dinner on the Quad will
-            also be approved.
+            We are approving undergraduate students in the Social Class Year of
+            2022, meaning you began your Stanford career in 2018. Undergraduate
+            students from the Class of 2021 who have chosen to designate as
+            Social Class Year 2022 members will also be approved.
           </div>
           <div className="FAQQuestion">What does the art look like?</div>
           <div className="FAQAnswer">
@@ -191,8 +201,8 @@ const Minter = (props) => {
             first NFT. Lastly, in the future, we hope to create real utility
             behind owning a graduation NFT, such as group messages, events, and
             other opportunities exclusive to owners of the NFT. Note that this
-            year is simply a pilot, so no utility or transferrability is
-            possible for the NFT.
+            year is simply a pilot, so no utility or transferability is possible
+            for the NFT.
           </div>
           <div className="FAQQuestion">
             NFTs are environmentally taxing. What are you doing about that?
@@ -201,14 +211,12 @@ const Minter = (props) => {
             We are buying carbon offsets for all the carbon produced through
             this project.
           </div>
-          <div className="FAQQuestion">Who runs this project?</div>
+          <div className="FAQQuestion">
+            Can I calim this after commencement?
+          </div>
           <div className="FAQAnswer">
-            We are 4 current Stanford undergrads who have teamed up with
-            Stanford to develop the NFTs and creating the art, and we are
-            excited to share this with you! This project is sponsored by the
-            Stanford Alumni Association and multiple other Stanford entities are
-            involved such as the Stanford Office of Student Engagement and the
-            Registrar.
+            No. This is a commencement related offering, so this is your only
+            chance to claim it!
           </div>
         </div>
       </div>
