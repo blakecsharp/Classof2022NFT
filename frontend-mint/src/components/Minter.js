@@ -155,7 +155,7 @@ const Minter = (props) => {
           <div className="FAQQuestion">Who runs this project?</div>
           <div className="FAQAnswer">
             We are four current Stanford undergrads who have teamed up with the
-            Class of 2022 to develop the NFTs and creating the art, and we are
+            Class of 2022 to develop the NFTs and create the art, and we are
             excited to share this with you! This project is sponsored by the
             Stanford Alumni Association and multiple other Stanford entities are
             involved such as the Stanford Office of Student Engagement.
@@ -175,10 +175,12 @@ const Minter = (props) => {
           </div>
           <div className="FAQQuestion">Who can claim an NFT?</div>
           <div className="FAQAnswer">
-            We are approving undergraduate students in the Social Class Year of
-            2022, meaning you began your Stanford career in 2018. Undergraduate
-            students from the Class of 2021 who have chosen to designate as
-            Social Class Year 2022 members will also be approved.
+            We are approving undergraduate students with Social Class Year 2022.
+            For the most part, this is the cohort of undergraduates who enrolled
+            at Stanford in the fall of 2018. We will also approve undergraduates
+            from other class years who took a leave of absence and returned to
+            enroll at Stanford this academic year and have chosen to formally
+            affiliate with Social Class Year 2022.
           </div>
           <div className="FAQQuestion">What does the art look like?</div>
           <div className="FAQAnswer">
@@ -212,7 +214,7 @@ const Minter = (props) => {
             this project.
           </div>
           <div className="FAQQuestion">
-            Can I calim this after commencement?
+            Can I claim this after commencement?
           </div>
           <div className="FAQAnswer">
             No. This is a commencement related offering, so this is your only
