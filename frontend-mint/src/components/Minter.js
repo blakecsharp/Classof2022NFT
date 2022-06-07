@@ -85,6 +85,7 @@ const Minter = (props) => {
       <div className="Instructions">
         <div className="Instructionsheader">
           <h2>Claim your Stanford Class of 2022 NFT with just a few clicks.</h2>
+          <h4>Deadline: June 10th 11:50 PM</h4>
         </div>
         <div className="instructions">
           <ol>
@@ -105,8 +106,11 @@ const Minter = (props) => {
               <div className="listContent">
                 Open your wallet, copy your wallet address by tapping on the
                 shorthand address starting with “0x”. For more help, refer to
-                these quick instructions. Click the “Submit my Wallet” button
-                below and submit your wallet address to the form.
+                <a href="https://metamask.zendesk.com/hc/en-us/articles/360015289512-How-to-copy-your-MetaMask-account-public-address-#:~:text=To%20access%20additional%20information%20about%20your%20account%2C%20see%20instructions%20here.&text=When%20you%20hover%20over%20the,account">
+                  these quick instructions
+                </a>
+                . Click the “Submit my Wallet” button below and submit your
+                wallet address to the form.
               </div>
               <div id="formButton">
                 <button

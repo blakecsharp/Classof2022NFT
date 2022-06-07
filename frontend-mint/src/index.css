@@ -32,6 +32,11 @@ ol li::before {
   margin-right: 30px;
 }
 
+h4 {
+  color: #80221c;
+  font-family: Saira;
+}
+
 a:link {
   color: #0029ff;
 }
