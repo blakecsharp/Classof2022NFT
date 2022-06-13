@@ -4,7 +4,7 @@ import { ethers } from "hardhat";
 import { signNonce } from "../scripts/lib/signNonce";
 import { StanfordClassof2022 } from "../typechain";
 
-const EXPECTED_TOKEN_URI = "ipfs://QmUW2246fZRGMv3An4EZhN78xVANQSw3ZKLXsAVa3DsAu9";
+const EXPECTED_TOKEN_URI = "ipfs://QmPZp6es1j48PXZ5CpaKT9f9qcmQaggcK7xbLtHJKjYxeR";
 
 describe("Class of 2022 Stanford NFT", function () {
   let StanfordClassof2022NFT: StanfordClassof2022;
