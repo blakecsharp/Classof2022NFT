@@ -85,7 +85,7 @@ const Minter = (props) => {
       <div className="Instructions">
         <div className="Instructionsheader">
           <h2>Claim your Stanford Class of 2022 NFT with just a few clicks.</h2>
-          <h4>Deadline: June 10th 11:50 PM</h4>
+          <h4>Deadline Extended to June 17th!</h4>
         </div>
         <div className="instructions">
           <ol>

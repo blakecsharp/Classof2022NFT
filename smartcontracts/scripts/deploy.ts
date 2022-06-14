@@ -6,7 +6,7 @@ import { ethers } from "hardhat";
  * balance to complete the transaction.
  *
  * To run:
- *   yarn hardhat run scripts/deploy.ts --network [mumbai | polygon]
+ *   yarn hardhat run scripts/deploy.ts --network [mumbai | polygon | rinkeby]
  */
 
 async function main() {
