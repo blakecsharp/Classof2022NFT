@@ -6,7 +6,7 @@ import { ethers } from "hardhat";
  * balance to complete the transaction.
  *
  * To run:
- *   yarn hardhat run scripts/deploy.ts --network [mumbai | polygon | rinkeby]
+ *   yarn hardhat run scripts/deploy.ts --network [mumbai | polygon | ropsten]
  */
 
 async function main() {
@@ -25,7 +25,7 @@ async function main() {
 
   console.log("StanfordClassOf2022NFT deployed to:", StanfordClassOf2022NFT.address);
   console.log(
-    "Note: Due to unknwown reasons, the address above might not in fact be the deployed contract's address. Please verify the address on polygonscan."
+    "Note: Due to unknwown reasons, the address above might not in fact be the deployed contract's address. Please verify the address on Etherscan."
   );
 }
 

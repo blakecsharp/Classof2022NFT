@@ -96,8 +96,7 @@ contract StanfordClassof2022 is ERC721, ERC721Enumerable, Ownable {
   constructor() ERC721("Stanford Class of 2022 Token", "Class of 2022") {}
 
   function _baseURI() internal pure override returns (string memory) {
-    // Update!
-    return "ipfs://QmUW2246fZRGMv3An4EZhN78xVANQSw3ZKLXsAVa3DsAu9";
+    return "ipfs://QmPZp6es1j48PXZ5CpaKT9f9qcmQaggcK7xbLtHJKjYxeR";
   }
 
   // Override required by Solidity.
