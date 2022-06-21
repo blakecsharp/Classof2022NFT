@@ -3,71 +3,6 @@ import stanfordLogo from "./images/SUSig_Stack_red.png";
 import alumniLogo from "./images/StanfordAlumniLogo.png";
 require("dotenv").config();
 
-const alchemyKey = process.env.REACT_APP_ALCHEMY_KEY;
-const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
-const web3 = createAlchemyWeb3(alchemyKey);
-
-const contractABI = [
-  {
-    anonymous: false,
-    inputs: [
-      {
-        indexed: true,
-        internalType: "address",
-        name: "previousOwner",
-        type: "address",
-      },
-      {
-        indexed: true,
-        internalType: "address",
-        name: "newOwner",
-        type: "address",
-      },
-    ],
-    name: "OwnershipTransferred",
-    type: "event",
-  },
-  {
-    inputs: [],
-    name: "owner",
-    outputs: [
-      {
-        internalType: "address",
-        name: "",
-        type: "address",
-      },
-    ],
-    stateMutability: "view",
-    type: "function",
-  },
-  {
-    inputs: [],
-    name: "renounceOwnership",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-  {
-    inputs: [
-      {
-        internalType: "address",
-        name: "newOwner",
-        type: "address",
-      },
-    ],
-    name: "transferOwnership",
-    outputs: [],
-    stateMutability: "nonpayable",
-    type: "function",
-  },
-];
-const contractAddress = "0xD3A109bce5332A33652708D361188523f7e04297";
-
-export const classContract = new web3.eth.Contract(
-  contractABI,
-  contractAddress
-);
-
 const Minter = (props) => {
   return (
     <div className="Minter">
@@ -85,7 +20,7 @@ const Minter = (props) => {
       <div className="Instructions">
         <div className="Instructionsheader">
           <h2>Claim your Stanford Class of 2022 NFT with just a few clicks.</h2>
-          <h4>Deadline Extended to June 17th!</h4>
+          <h4>Deadline Extended to June 24th!</h4>
         </div>
         <div className="instructions">
           <ol>
@@ -105,9 +40,9 @@ const Minter = (props) => {
               Submit your wallet address to our form
               <div className="listContent">
                 Open your wallet, copy your wallet address by tapping on the
-                shorthand address starting with “0x”. For more help, refer to
+                shorthand address starting with “0x”. For more help, refer to&nbsp;
                 <a href="https://metamask.zendesk.com/hc/en-us/articles/360015289512-How-to-copy-your-MetaMask-account-public-address-#:~:text=To%20access%20additional%20information%20about%20your%20account%2C%20see%20instructions%20here.&text=When%20you%20hover%20over%20the,account">
-                  these quick instructions
+                   these quick instructions
                 </a>
                 . Click the “Submit my Wallet” button below and submit your
                 wallet address to the form.
